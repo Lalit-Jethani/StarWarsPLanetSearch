@@ -1,0 +1,166 @@
+.error {
+  color: red;
+}
+.Planetcontainer {
+  margin-top: 100px;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  border: 2px solid #ccc !important;
+  height: 35px;
+  border-radius: 3px;
+  max-width: 100%;
+}
+
+/* Search Styles */
+
+.search {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.search__title {
+  font-size: 2.6rem;
+}
+
+.search__subtitle {
+  margin-top: 10px;
+  text-align: center;
+  line-height: 1.5rem;
+  color: blue;
+  font-size: 1.2rem;
+}
+
+input {
+  border: 0;
+  border-bottom: 1px solid rgb(14, 224, 172);
+  border-radius: 0;
+  background: transparent;
+  padding: 10px 20px 10px 30px;
+  width: 100%;
+  color: rgb(25, 248, 237);
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.125rem;
+}
+/* Planets */
+.results {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-content: center;
+  flex-flow: wrap;
+}
+ul {
+  list-style-type: none;
+}
+.results__item {
+  display: flex;
+  position: relative;
+  margin: 0 1% 15px;
+  box-shadow: 0 3px 20px;
+  background: rgb(0, 255, 242);
+  overflow: auto;
+  text-overflow: ellipsis;
+  padding: 30px 20px;
+  text-align: center;
+  vertical-align: middle;
+  align-content: center;
+  justify-content: center;
+  float: left;
+  overflow: hidden;
+  list-style: none;
+  flex-direction: column;
+}
+.results__bg {
+  position: absolute;
+  right: -90px;
+  bottom: 10px;
+}
+.results__title {
+  display: inline-block;
+  margin: 0 0 10px;
+
+  padding-bottom: 3px;
+  line-height: 2rem;
+}
+
+.results__info {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.5rem;
+}
+
+/* Loader */
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
